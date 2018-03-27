@@ -36,28 +36,3 @@ p {
   text-align: center;
   margin-top: 0;
 }
-
-.count {
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: 4rem;
-  color: #333;
-}
-
-[disabled] + .count {
-  color: #999;
-}
-
-.add {
-  background-color: mediumseagreen;
-  color: #fff;
-}
-
-.sub {
-  background-color: mediumvioletred;
-  color: #fff;
-}
-
-.sub[disabled] {
-  opacity: .5;
-}
