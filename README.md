@@ -1,12 +1,10 @@
-# teamWeb2018
+# MyFlowersManager
 
 ## Description
 
-Projet web IMAC 2018
-Réalisation d'un dashboard
+Projet web IMAC 2018 : Réalisation d'un dashboard pour aider un fleuriste à gérer son entreprise et ses plantes
 
 ## Technos
 
-PHP
-Node.js
-Hyperapp
+- PHP
+- React JS
