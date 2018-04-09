@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 import logo from '../crepe.png';
 
-class SignUpForm extends Component {
+class WelcomePage extends Component {
   render() {
     return (<form action="action_page.php">
 
@@ -74,4 +74,4 @@ class SignUpForm extends Component {
     }
 }
 
-export default SignUpForm;
+export default WelcomePage;

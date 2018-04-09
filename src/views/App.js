@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../assets/css/App.css';
 import Card from '../components/Card.jsx';
 import Sidebar from '../components/Sidebar.jsx';
-import SignUpForm from '../components/SignUpForm.jsx';
+import WelcomePage from '../components/WelcomePage.jsx';
 import logo from '../assets/img/logo-flower.png';
 
 class App extends Component {
@@ -17,7 +17,7 @@ class App extends Component {
           <p className="logo-text"> My Flowers Manager </p>
         </div>
         <div className="form-container">
-          <SignUpForm />
+          <WelcomePage />
         </div>
       </div>
     )
