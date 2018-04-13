@@ -4,10 +4,30 @@ import Card from '../components/Card.jsx';
 import Sidebar from '../components/Sidebar.jsx';
 import WelcomePage from '../components/WelcomePage.jsx';
 import logo from '../assets/img/logo-flower.png';
+import axios from 'axios'
 
 class App extends Component {
+  constructor() {
+    super()
+    this.state = {
+      user: {
+        userId: '',
+        sessionId: ''
+      }
+    }
+  }
+  login() {
+    axios.get('../../api/test/login')
+   .then(response => this.setState({user: {userId: response.data.userId, sessionId: response.data.sessionId}}))
+  }
   userConnected() {
-    return false
+    this.login()
+    console.log(this.state)
+    if (this.state.userId == '' || this.state.sessionId == '')
+      return false
+    else {
+      return true
+    }
   }
   disconnectedInterface() {
     return (
