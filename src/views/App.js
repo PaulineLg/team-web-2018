@@ -11,31 +11,22 @@ class App extends Component {
    super()
    this.state = {
      user: {
-       userId: 'userTest',
+       userId: '203',
        sessionId: '055dHLShfs05165fdfsd'
      }
    }
  }
  login() {
-   /*
-    axios.get('./api/test/login')
-   .then(response => this.setState({user: {userId: response.data.userId, sessionId: response.data.sessionId}}))
-   */
+    axios.get('https://jsonplaceholder.typicode.com/users/1')
+   .then(response => this.setState({user: {userId: response.data.id, sessionId: response.data.username + response.data.address.zipcode}}))
   }
   userConnected() {
     this.login()
-    console.log(this.state)
+    //console.log(this.state)
     if (this.state.user.userId && this.state.user.sessionId)
-    {
-      console.log('true')
       return true
-    }
     else
-    {
-      console.log('false')
       return false
-    }
-
   }
   disconnectedInterface() {
     return (
@@ -53,7 +44,7 @@ class App extends Component {
   connectedInterface() {
     return (
       <div className="App">
-        Holà est-ce que ça marche ? Oui !
+        <Sidebar menu='user' />
       </div>
     )
   }
