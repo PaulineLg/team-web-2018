@@ -25,7 +25,7 @@ class App extends Component {
   connectedInterface() {
     return (
       <div className="App">
-        Holà
+        Holà est-ce que ça marche ? Oui !
       </div>
     )
   }
