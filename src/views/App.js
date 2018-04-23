@@ -11,23 +11,31 @@ class App extends Component {
    super()
    this.state = {
      user: {
-       userId: '',
-       sessionId: ''
+       userId: 'userTest',
+       sessionId: '055dHLShfs05165fdfsd'
      }
    }
  }
  login() {
+   /*
     axios.get('./api/test/login')
    .then(response => this.setState({user: {userId: response.data.userId, sessionId: response.data.sessionId}}))
+   */
   }
   userConnected() {
     this.login()
     console.log(this.state)
-    if (this.state.userId === '' || this.state.sessionId === '')
-      return false
-    else {
+    if (this.state.user.userId && this.state.user.sessionId)
+    {
+      console.log('true')
       return true
     }
+    else
+    {
+      console.log('false')
+      return false
+    }
+
   }
   disconnectedInterface() {
     return (
