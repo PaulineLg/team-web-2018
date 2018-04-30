@@ -9,26 +9,25 @@ import axios from 'axios'
 
 class App extends Component {
   constructor() {
-    super()
-    this.state = {
-      user: {
-        userId: '',
-        sessionId: ''
-      }
-    }
-  }
-  login() {
-    axios.get('../../api/test/login')
-   .then(response => this.setState({user: {userId: response.data.userId, sessionId: response.data.sessionId}}))
+   super()
+   this.state = {
+     user: {
+       userId: '203',
+       sessionId: '055dHLShfs05165fdfsd'
+     }
+   }
+ }
+ login() {
+    axios.get('https://jsonplaceholder.typicode.com/users/1')
+   .then(response => this.setState({user: {userId: response.data.id, sessionId: response.data.username + response.data.address.zipcode}}))
   }
   userConnected() {
     this.login()
-    console.log(this.state)
-    if (this.state.userId == '' || this.state.sessionId == '')
-      return false
-    else {
+    //console.log(this.state)
+    if (this.state.user.userId && this.state.user.sessionId)
       return true
-    }
+    else
+      return false
   }
   disconnectedInterface() {
     return (
@@ -46,7 +45,8 @@ class App extends Component {
   connectedInterface() {
     return (
       <div className="App">
-        Holà
+        <Sidebar menu='user' />
+       Holà
         <div id="menu">
           <ShippingGraph />
           <div id='chart-container'></div>
