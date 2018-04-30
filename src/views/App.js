@@ -7,7 +7,8 @@ import WelcomePage from '../components/WelcomePage.jsx';
 import logo from '../assets/img/logo-flower.png';
 import axios from 'axios'
 import UpkeepPlants from '../components/UpkeepPlants.jsx';
-
+import { GoogleApiWrapper } from 'google-maps-react' 
+import MapContainer from '../components/MapContainer'
 class App extends Component {
   constructor() {
    super()
@@ -51,6 +52,10 @@ class App extends Component {
         <div id="menu">
           <UpkeepPlants />
           <div id='chart-container'></div>
+          <div>
+          <h1> LA MAP BB</h1> 
+            <MapContainer google={this.props.google} />
+          </div>
         </div>
       </div>
     )
@@ -66,4 +71,6 @@ class App extends Component {
   }
 }
 
-export default App;
+export default GoogleApiWrapper({
+  apiKey: 'AIzaSyA9t2IFhXU00dJYTiHnWMRMjVXW_GWv0aQ',
+})(App)
