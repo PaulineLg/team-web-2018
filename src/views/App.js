@@ -12,8 +12,8 @@ class App extends Component {
    super()
    this.state = {
      user: {
-       userId: '203',
-       sessionId: '055dHLShfs05165fdfsd'
+       userId: 'fe',
+       sessionId: 'gg'
      }
    }
  }

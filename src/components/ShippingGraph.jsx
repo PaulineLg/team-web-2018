@@ -14,12 +14,12 @@ Charts(FusionCharts);
 
 const myDataSource = {
     "chart": {
-      "caption": "Worldwide Smartphone Sales to End Users from 2011 to 2015",
-      "subcaption": "By Top 3 Vendors",
-      "linethickness": "2",
-      "numberPrefix": "$",
+      "caption": "Shipping Graph",
+      "subcaption": "Average of time delivery",
+      "linethickness": "3",
+      "numberSuffix": " days",
       "showvalues": "0",
-      "formatnumberscale": "1",
+      "formatnumberscale": "0",
       "labeldisplay": "ROTATE",
       "slantlabels": "1",
       "divLineAlpha": "40",
@@ -56,88 +56,50 @@ const myDataSource = {
     "dataset": [{
       "seriesname": "Expected time",
       "data": [{
-        "value": "716000"
+        "value": "3"
       }, {
-        "value": "771700"
+        "value": "5"
       }, {
-        "value": "687800"
+        "value": "7"
       }, {
-        "value": "698300"
+        "value": "2"
       }, {
-        "value": "826100"
+        "value": "9"
       }, {
-        "value": "938300"
+        "value": "3"
       }, {
-        "value": "892800"
+        "value": "8"
       }, {
-        "value": "904300"
+        "value": "4"
       }, {
-        "value": "979600"
+        "value": "8"
       }, {
-        "value": "1069600"
-      }, {
-        "value": "1006600"
-      }, {
-        "value": "1075300"
-      }, {
-        "value": "1170500"
-      }, {
-        "value": "1192100"
-      }, {
-        "value": "1100500"
-      }, {
-        "value": "974200"
-      }, {
-        "value": "936200"
-      }, {
-        "value": "979900"
-      }, {
-        "value": "887400"
-      }, {
-        "value": "1020600"
+        "value": "5"
       }]
     }, {
       "seriesname": "Effective time",
       "data": [{
-        "value": "1174600"
+        "value": "4"
       }, {
-        "value": "1222800"
+        "value": "2"
       }, {
-        "value": "1075600"
+        "value": "9"
       }, {
-        "value": "978700"
+        "value": "6"
       }, {
-        "value": "1053500"
+        "value": "5"
       }, {
-        "value": "1117000"
+        "value": "6"
       }, {
-        "value": "831600"
+        "value": "7"
       }, {
-        "value": "834200"
+        "value": "8"
       }, {
-        "value": "823000"
+        "value": "9"
       }, {
-        "value": "850500"
+        "value": "1"
       }, {
         "value": "632200"
-      }, {
-        "value": "609500"
-      }, {
-        "value": "630600"
-      }, {
-        "value": "635800"
-      }, {
-        "value": "496900"
-      }, {
-        "value": "438100"
-      }, {
-        "value": "431300"
-      }, {
-        "value": "330000"
-      }, {
-        "value": "276900"
-      }, {
-        "value": "302900"
       }]
     }]
   }
