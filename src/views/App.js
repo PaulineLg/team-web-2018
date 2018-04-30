@@ -50,8 +50,6 @@ class App extends Component {
         <div id="menu">
           <ShippingGraph />
           <div id='chart-container'></div>
-
-
         </div>
       </div>
     )
