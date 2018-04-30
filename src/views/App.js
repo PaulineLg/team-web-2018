@@ -6,6 +6,7 @@ import ShippingGraph from '../components/ShippingGraph.jsx';
 import WelcomePage from '../components/WelcomePage.jsx';
 import logo from '../assets/img/logo-flower.png';
 import axios from 'axios'
+import UpkeepPlants from '../components/UpkeepPlants.jsx';
 
 class App extends Component {
   constructor() {
@@ -48,7 +49,7 @@ class App extends Component {
         <Sidebar menu='user' />
        Holà
         <div id="menu">
-          <ShippingGraph />
+          <UpkeepPlants />
           <div id='chart-container'></div>
         </div>
       </div>
