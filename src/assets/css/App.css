@@ -175,8 +175,9 @@ button:hover {
 }
 
 .selected {
-  text-decoration: underline;
+  /*text-decoration: underline;*/
   font-size: 1.4em;
+  text-transform: uppercase;
 }
 
 #ShippingGraph{

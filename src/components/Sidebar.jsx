@@ -13,25 +13,37 @@ class Sidebar extends Component{
         orders: ''
       }
     }
-    switch (this.props.menu) {
-      case 'user':
-        this.state.menuClasses.user = 'selected'
-        break
-      case 'plants':
-        this.state.menuClasses.plants = 'selected'
-        break
-      case 'stock':
-        this.state.menuClasses.stock = 'selected'
-        break
-      case 'orders':
-        this.state.menuClasses.orders = 'selected'
-        break
-      default:
-        break
-    }
-    console.log(this.state)
+    this.switchMenu()
   }
+  switchMenu = () => {
+      this.state = {
+        menuClasses : {
+          user: '',
+          plants: '',
+          stock: '',
+          orders: ''
+        }
+      }
+      switch (this.props.menu) {
+        case 'user':
+          this.state.menuClasses.user = 'selected'
+          break
+        case 'plants':
+          this.state.menuClasses.plants = 'selected'
+          break
+        case 'stock':
+          this.state.menuClasses.stock = 'selected'
+          break
+        case 'orders':
+          this.state.menuClasses.orders = 'selected'
+          break
+        default:
+          break
+      }
+    }
     render(){
+        this.switchMenu()
+        let changeMenu = this.props.changeMenu
         return (
             <div id="sidebar" className="sidebar" data-color="black">
                     <div className="logo-sidebar">
@@ -47,10 +59,10 @@ class Sidebar extends Component{
                     </div>
                 <div className="sidebar-wrapper">
                     <ul className="nav">
-                        <li id="user" class={this.state.menuClasses.user}> USER </li>
-                        <li id="plants" class={this.state.menuClasses.plants}> Plants </li>
-                        <li id="stock" class={this.state.menuClasses.stock}> Stock </li>
-                        <li id="orders" class={this.state.menuClasses.orders}> Orders </li>
+                      <li id="user" onClick={() => changeMenu("user")} className={this.state.menuClasses.user}> User </li>
+                    <li id="plants" onClick={() => changeMenu("plants")} className={this.state.menuClasses.plants}> Plants </li>
+                    <li id="stock" onClick={() => changeMenu("stock")} className={this.state.menuClasses.stock}> Stock </li>
+                    <li id="orders" onClick={() => changeMenu("orders")} className={this.state.menuClasses.orders}> Orders </li>
                     </ul>
                 </div>
             </div>

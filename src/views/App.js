@@ -7,7 +7,7 @@ import WelcomePage from '../components/WelcomePage.jsx';
 import logo from '../assets/img/logo-flower.png';
 import axios from 'axios'
 import UpkeepPlants from '../components/UpkeepPlants.jsx';
-import { GoogleApiWrapper } from 'google-maps-react' 
+import { GoogleApiWrapper } from 'google-maps-react'
 import MapContainer from '../components/MapContainer'
 import User from '../views/User.js'
 
@@ -15,19 +15,20 @@ class App extends Component {
   constructor() {
    super()
    this.state = {
+     menu : 'user',
      user: {
        userId: 'fe',
        sessionId: 'gg'
      }
    }
+   this.login()
  }
  login() {
     axios.get('https://jsonplaceholder.typicode.com/users/1')
    .then(response => this.setState({user: {userId: response.data.id, sessionId: response.data.username + response.data.address.zipcode}}))
   }
   userConnected() {
-    this.login()
-    //console.log(this.state)
+    //this.login()
     if (this.state.user.userId && this.state.user.sessionId)
       return true
     else
@@ -47,19 +48,28 @@ class App extends Component {
     )
   }
   connectedInterface() {
+    let changeMenu = this.changeMenu
     return (
       <div className="App">
-        <Sidebar menu='user' />
-  
+        <Sidebar menu={this.state.menu} changeMenu={changeMenu} />
+        Menu = {this.state.menu}
         <div id="menu">
           <User />
           <div>
-          <h1> LA MAP BB</h1> 
+          <h1> LA MAP BB</h1>
             <MapContainer google={this.props.google} />
           </div>
         </div>
       </div>
     )
+  }
+  changeMenu = (newMenu) => {
+    this.state.menu = newMenu
+    //let menu = this.state.menu
+    /*this.setState((menu) => {
+      return {menu: newMenu}
+    })*/
+    this.setState(this.state)
   }
   render() {
     if (this.userConnected()) {
