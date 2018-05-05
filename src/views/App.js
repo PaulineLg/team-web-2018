@@ -53,7 +53,7 @@ class App extends Component {
           <UpkeepPlants />
           <div id='chart-container'></div>
           <div>
-          <h1> LA MAP BB</h1> 
+            <h1> LA MAP BB</h1> 
             <MapContainer google={this.props.google} />
           </div>
         </div>
@@ -72,5 +72,5 @@ class App extends Component {
 }
 
 export default GoogleApiWrapper({
-  apiKey: 'AIzaSyA9t2IFhXU00dJYTiHnWMRMjVXW_GWv0aQ',
+  apiKey: 'AIzaSyDqBtxzHvrr8sU-WhNhW8sVjL8YYVZPRmk',
 })(App)

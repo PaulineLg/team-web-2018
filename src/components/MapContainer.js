@@ -17,7 +17,7 @@ export default class MapContainer extends Component {
     ]
   }
 
-  componentDidUpdate() {
+  componentDidMount() {
     this.loadMap(); 
   }
 
