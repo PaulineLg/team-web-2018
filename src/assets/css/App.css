@@ -178,3 +178,13 @@ button:hover {
   text-decoration: underline;
   font-size: 1.4em;
 }
+
+#ShippingGraph{
+  position: absolute;
+  margin-left: 12%;
+}
+
+#UpkeepPlants{
+  position: absolute;
+  margin-left: 55%;
+}

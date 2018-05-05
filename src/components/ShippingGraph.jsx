@@ -119,7 +119,6 @@ class ShippingGraph extends Component{
         };
         return (
             <div>
-                Shipping Graph
                 <ReactFC
                     width="600"
                     height="400"

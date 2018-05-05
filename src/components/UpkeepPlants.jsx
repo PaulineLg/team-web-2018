@@ -130,7 +130,6 @@ class UpkeepPlants extends Component{
         };
         return (
             <div>
-                UpkeepPlants Graph
                 <ReactFC
                     width="600"
                     height="400"
