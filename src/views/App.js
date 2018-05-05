@@ -54,8 +54,8 @@ class App extends Component {
         <Sidebar menu={this.state.menu} changeMenu={changeMenu} />
         Menu = {this.state.menu}
         <div id="menu">
-          <User />
           <div>
+          {this.page(this.state.menu)}
           <h1> LA MAP BB</h1>
             <MapContainer google={this.props.google} />
           </div>
@@ -70,6 +70,24 @@ class App extends Component {
       return {menu: newMenu}
     })*/
     this.setState(this.state)
+  }
+  page = (menu) => {
+    switch (menu) {
+      case 'user':
+        return (<User />)
+        break;
+      case 'plants':
+        return;
+        break;
+      case 'stock':
+        return;
+        break;
+      case 'orders':
+        return;
+        break;
+      default:
+
+    }
   }
   render() {
     if (this.userConnected()) {

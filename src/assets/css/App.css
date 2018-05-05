@@ -165,19 +165,21 @@ button:hover {
 .nav {
   list-style: none;
   margin: 10px 0;
+  font-size: 1.2rem;
   padding: 0;
 }
 
 .nav li {
   padding-top: 10px;
-  font-size: 1.2rem;
   cursor: pointer;
 }
 
 .selected {
   /*text-decoration: underline;*/
-  font-size: 1.4em;
+  font-size: 1.3rem;
   text-transform: uppercase;
+  color: pink;
+  transition: 1s color ease;
 }
 
 #ShippingGraph{
