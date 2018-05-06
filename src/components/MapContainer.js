@@ -4,9 +4,6 @@ import ReactDOM from 'react-dom'
 
 export default class MapContainer extends Component {
 
-  // ======================
-  // ADD LOCATIONS TO STATE
-  // ======================
   state = {
     locations: [
       { name: "New York County Supreme Court", location: {lat: 40.7143033, lng: -74.0036919} },
@@ -51,9 +48,9 @@ export default class MapContainer extends Component {
 
   render() {
     const style = { 
-      width: '90vw', 
-      height: '75vh' 
-    }
+      width: '50vw', 
+      height: '45vh'
+      }
 
     return (
       <div ref="map" style={style}>

@@ -7,8 +7,6 @@ import WelcomePage from '../components/WelcomePage.jsx';
 import logo from '../assets/img/logo-flower.png';
 import axios from 'axios'
 import UpkeepPlants from '../components/UpkeepPlants.jsx';
-import { GoogleApiWrapper } from 'google-maps-react'
-import MapContainer from '../components/MapContainer'
 import User from '../views/User.js'
 
 class App extends Component {
@@ -52,12 +50,13 @@ class App extends Component {
     return (
       <div className="App">
         <Sidebar menu={this.state.menu} changeMenu={changeMenu} />
-        Menu = {this.state.menu}
+         {/*Menu = {this.state.menu}*/} 
+         <div>
+         <h1>USER STATISTICS</h1>
+         </div>
         <div id="menu">
           <div>
           {this.page(this.state.menu)}
-          <h1> LA MAP BB</h1>
-            <MapContainer google={this.props.google} />
           </div>
         </div>
       </div>
@@ -100,6 +99,4 @@ class App extends Component {
   }
 }
 
-export default GoogleApiWrapper({
-  apiKey: 'AIzaSyA9t2IFhXU00dJYTiHnWMRMjVXW_GWv0aQ',
-})(App)
+export default App
