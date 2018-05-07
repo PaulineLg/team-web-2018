@@ -14,6 +14,8 @@ class User extends Component {
   UserView() {
     return (
       <div className="User">
+        <h1>USER STATISTICS</h1>
+        <h2>Bonjour {this.props.user.name} !</h2>
         <div id="OrdersMap">
             <MapContainer google={this.props.google} />
         </div>
@@ -24,7 +26,6 @@ class User extends Component {
           <UpkeepPlants />
         </div>
         <div id='chart-container'></div>
-      
       </div>
     )
   }
@@ -36,4 +37,3 @@ class User extends Component {
 export default GoogleApiWrapper({
   apiKey: 'AIzaSyA9t2IFhXU00dJYTiHnWMRMjVXW_GWv0aQ',
 })(User)
-

@@ -4,8 +4,8 @@ export class Card extends Component{
     render(){
         return (
             <div className={"card "+(this.props.name)}>
-                { this.props.nom }
-                { this.props.couleur }
+              <h3> {this.props.title} </h3>
+              
             </div>
         );
     }

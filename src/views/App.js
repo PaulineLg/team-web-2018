@@ -15,15 +15,17 @@ class App extends Component {
    this.state = {
      menu : 'user',
      user: {
+       name: '',
        userId: 'fe',
-       sessionId: 'gg'
+       sessionId: 'gg',
+       img: 'http://i.stack.imgur.com/mGmfu.png'
      }
    }
    this.login()
  }
  login() {
     axios.get('https://jsonplaceholder.typicode.com/users/1')
-   .then(response => this.setState({user: {userId: response.data.id, sessionId: response.data.username + response.data.address.zipcode}}))
+   .then(response => this.setState({user: {name: response.data.username, userId: response.data.id, sessionId: response.data.username + response.data.address.zipcode}}))
   }
   userConnected() {
     //this.login()
@@ -49,11 +51,8 @@ class App extends Component {
     let changeMenu = this.changeMenu
     return (
       <div className="App">
-        <Sidebar menu={this.state.menu} changeMenu={changeMenu} />
-         {/*Menu = {this.state.menu}*/} 
-         <div>
-         <h1>USER STATISTICS</h1>
-         </div>
+        <Sidebar menu={this.state.menu} changeMenu={changeMenu} user={this.state.user} />
+         {/*Menu = {this.state.menu}*/}
         <div id="menu">
           <div>
           {this.page(this.state.menu)}
@@ -73,7 +72,7 @@ class App extends Component {
   page = (menu) => {
     switch (menu) {
       case 'user':
-        return (<User />)
+        return (<User user={this.state.user} />)
         break;
       case 'plants':
         return;
