@@ -8,6 +8,7 @@ import logo from '../assets/img/logo-flower.png';
 import axios from 'axios'
 import UpkeepPlants from '../components/UpkeepPlants.jsx';
 import User from '../views/User.js'
+import Plants from '../views/Plants.js'
 
 class App extends Component {
   constructor() {
@@ -75,7 +76,7 @@ class App extends Component {
         return (<User user={this.state.user} />)
         break;
       case 'plants':
-        return;
+        return  (<Plants user={this.state.user} />);
         break;
       case 'stock':
         return;
