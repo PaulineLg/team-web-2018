@@ -15,9 +15,15 @@ class User extends Component {
     return (
       <div className="User">
         <h1>USER STATISTICS</h1>
-        <h2>Bonjour {this.props.user.name} !</h2>
+        
         <div id="OrdersMap">
             <MapContainer google={this.props.google} />
+            <div id="orders-list">Hello {this.props.user.name}, <br/>
+            The adresses of the next 3 deliveries to make : <br/>
+            New York County Supreme Court <br/>
+            Queens County Supreme Court <br/>
+            Kings County Supreme Court <br/>
+            </div>
         </div>
         <div id="ShippingGraph" >
           <ShippingGraph />
