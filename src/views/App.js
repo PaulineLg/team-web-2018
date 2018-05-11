@@ -9,6 +9,7 @@ import axios from 'axios'
 import UpkeepPlants from '../components/UpkeepPlants.jsx';
 import User from '../views/User.js'
 import Plants from '../views/Plants.js'
+import Stock from './Stock';
 
 class App extends Component {
   constructor() {
@@ -79,7 +80,7 @@ class App extends Component {
         return  (<Plants user={this.state.user} />);
         break;
       case 'stock':
-        return;
+        return (<Stock user={this.state.user} />);
         break;
       case 'orders':
         return;

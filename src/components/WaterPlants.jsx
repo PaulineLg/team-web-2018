@@ -29,9 +29,7 @@ const myDataSource = {
             "basefontcolor": "CC0000",
             "chartleftmargin": "15",
             "chartrightmargin": "15",
-            "charttopmargin": "15",
-            "bgAlpha" : "100",
-            "bgColor" : "none"
+            "charttopmargin": "15"
         },
         "value": "44",
         "annotations": {
@@ -46,11 +44,10 @@ const myDataSource = {
                             "tox": "$chartEndX-1",
                             "toy": "$chartEndY-1",
                             "color": "FFFFFF",
-                            "alpha": "50",
+                            "alpha": "0",
                             "showborder": "0",
                             "bordercolor": "CC0000",
-                            "borderthickness": "2",
-                            "radius": "10"
+                            "borderthickness": "2"
                         }
                     ]
                 }
@@ -72,8 +69,8 @@ class WaterPlants extends Component{
         <div>
             Pourcentage of water
             <ReactFC
-            width="600"
-            height="400"
+            width="400"
+            height="300"
             type="cylinder"
             dataSource={myDataSource}
             fcLibrary={FusionCharts} // Provide FusionCharts library

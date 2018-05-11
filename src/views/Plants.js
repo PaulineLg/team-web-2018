@@ -8,6 +8,7 @@ import logo from '../assets/img/logo-flower.png';
 import axios from 'axios'
 import UpkeepPlants from '../components/UpkeepPlants.jsx';
 import WaterPlants from '../components/WaterPlants.jsx';
+import TreatmentPlants from '../components/TreatmentPlants.jsx';
 import MapContainer from '../components/MapContainer.js';
 
 class Plants extends Component {
@@ -26,6 +27,7 @@ class Plants extends Component {
         <div id="water">
              
             <WaterPlants />
+            <TreatmentPlants />
         </div>
       </div>
     )
