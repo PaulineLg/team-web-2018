@@ -25,11 +25,13 @@ const myDataSource = {
             "showlimits": "0",
             "numbersuffix": "%",
             "decmials": "0",
-            "cylfillcolor": "CC0000",
+            "cylfillcolor": "3333ff",
             "basefontcolor": "CC0000",
             "chartleftmargin": "15",
             "chartrightmargin": "15",
-            "charttopmargin": "15"
+            "charttopmargin": "15",
+            "bgAlpha" : "100",
+            "bgColor" : "none"
         },
         "value": "44",
         "annotations": {
@@ -44,7 +46,7 @@ const myDataSource = {
                             "tox": "$chartEndX-1",
                             "toy": "$chartEndY-1",
                             "color": "FFFFFF",
-                            "alpha": "100",
+                            "alpha": "50",
                             "showborder": "0",
                             "bordercolor": "CC0000",
                             "borderthickness": "2",
