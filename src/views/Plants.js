@@ -14,22 +14,24 @@ import MapContainer from '../components/MapContainer.js';
 class Plants extends Component {
   PlantsView() {
     return (
-      <div className="Plants">
-        <div id="plantsList">
-            <ul>
-                <li>Tulipes</li>
-                <li>Rose</li>
-                <li>Lila</li>
-                <li>Muguet</li>
-            </ul>
+
+        <div className="Plants">
+            <h1>MY PLANTS</h1>
+            <div id="plantsList">
+                <div id="water">
+                    <WaterPlants />
+                    <div id="orders-list">Hello {this.props.user.name}, your watering level for this plants <br/>
+                    Tulipes <br/>
+                    Rose <br/>
+                    Lila <br/>
+                    Muguet <br/>
+                    </div>
+                </div>
+            </div>
+            <div id="treatment">
+                <TreatmentPlants />
+            </div>
         </div>
-            Hola como esta ?
-        <div id="water">
-             
-            <WaterPlants />
-            <TreatmentPlants />
-        </div>
-      </div>
     )
   }
   render() {

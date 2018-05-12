@@ -15,7 +15,7 @@ Charts(FusionCharts);
 const myDataSource = {
         "chart": {
             "manageresize": "1",
-            "bgcolor": "FFFFFF",
+            "bgcolor": "666666",
             "bgalpha": "0",
             "showborder": "0",
             "lowerlimit": "0",
@@ -67,7 +67,6 @@ class WaterPlants extends Component{
     render(){
         return (
         <div>
-            Pourcentage of water
             <ReactFC
             width="400"
             height="300"

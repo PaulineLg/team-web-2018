@@ -221,12 +221,31 @@ button:hover {
   margin-top: 5%;
   margin-left: 22%;
 }
+
+#water{
+  margin-top: 5%;
+  margin-left: 2%;
+}
+#treatment{
+  margin-top: 25%;
+  margin-left: 2%;
+}
+
 #orders-list {
   color : white;
   font: 20px Helvetica, serif;
   text-align: left;
   margin-left: 55%;
   margin-top: -28%;
+  line-height: 38px;
+}
+
+#plantsList{
+  color : white;
+  font: 20px Helvetica, serif;
+  text-align: left;
+  margin-left: 15%;
+  margin-top: 10%;
   line-height: 38px;
 }
 
