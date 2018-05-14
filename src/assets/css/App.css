@@ -240,13 +240,40 @@ button:hover {
   line-height: 38px;
 }
 
+#orders-list ul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
+
+#orders-list ul li{
+  float: left;
+  border-right: 1px solid transparent;
+}
+
 #plantsList{
   color : white;
   font: 20px Helvetica, serif;
-  text-align: left;
+  text-align: center;
   margin-left: 15%;
   margin-top: 10%;
   line-height: 38px;
+  background-color: black; 
+  height: auto;
+  width: 90%;
+}
+
+#plantsList ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style: none;
+  text-align: center;
+}
+
+#plantsList ul li{
+  border-right: 10px solid transparent; 
 }
 
 h1 {
