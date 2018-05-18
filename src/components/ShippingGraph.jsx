@@ -140,7 +140,7 @@ class ShippingGraph extends Component{
                     type="msline"
                     dataSource={myDataSource}
                     fcLibrary={FusionCharts} // Provide FusionCharts library
-                />,
+                />
             </div>
         );
     }

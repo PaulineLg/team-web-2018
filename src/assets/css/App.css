@@ -244,13 +244,38 @@ button:hover {
   line-height: 38px;
 }
 
+#orders-list ul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
+
+#orders-list ul li{
+  float: left;
+  border-right: 1px solid transparent;
+}
+
 #plantsList{
   color : white;
   font: 20px Helvetica, serif;
-  text-align: left;
-  margin-left: 15%;
-  margin-top: 10%;
+  text-align: center;
   line-height: 38px;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  margin-top: 10%;
+  margin-left: 50%;
+}
+
+#plantsList ul{
+  justify-content: center;
+  list-style: none;
+  text-align: center;
+}
+
+#plantsList ul li{
+  border-right: 10px solid transparent; 
 }
 
 h1 {
@@ -260,4 +285,23 @@ h1 {
 	font: 30px Helvetica, Sans-Serif;
 	letter-spacing: 5px;
 	color: #455A64 ;
+}
+
+
+#button-prev, #button-next{
+  background-color: white;
+  color: black;
+  width: 5%;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+}
+
+#listState{
+  width: 20%;
+}
+
+#right, #left{
+  margin-left: 35%;
 }

@@ -12,21 +12,56 @@ import TreatmentPlants from '../components/TreatmentPlants.jsx';
 import MapContainer from '../components/MapContainer.js';
 
 class Plants extends Component {
+    constructor(props) {
+        super(props)
+        this.handleNextPlant = this.handleNextPlant.bind(this);
+        this.handlePrevPlant = this.handlePrevPlant.bind(this);
+        this.state = {
+            plants: ['Tulip', 'Rose', 'Muguet', 'Orchidées'],
+            currentPlant: 0
+        }
+      }
+
+handleNextPlant = (newCurrent) => {
+    console.log(this.state.currentPlant);
+    this.setState((preState) => {
+        if(this.state.currentPlant >= this.state.plants.length){
+           return  {
+               currentPlant : preState.currentPlant-this.state.plants.length
+           }
+        }
+        return {
+            currentPlant : preState.currentPlant++
+        };
+    });
+}
+
+ handlePrevPlant = (newCurrent) => {
+    console.log(this.state.currentPlant);
+    this.setState((preState) => {
+        if(this.state.currentPlant <= -1){
+           return  {
+               currentPlant : this.state.plants.length-1
+           }
+        }
+        return {
+            currentPlant : preState.currentPlant--
+        };
+    });
+ }
+
   PlantsView() {
     return (
-
         <div className="Plants">
             <h1>MY PLANTS</h1>
+            Hello {this.props.user.name}, your watering level for this plants
             <div id="plantsList">
-                <div id="water">
-                    <WaterPlants />
-                    <div id="orders-list">Hello {this.props.user.name}, your watering level for this plants <br/>
-                    Tulipes <br/>
-                    Rose <br/>
-                    Lila <br/>
-                    Muguet <br/>
-                    </div>
-                </div>
+                <div id="button-prev" onClick={() => this.handlePrevPlant(this.state.currentPlant--)}><div id="right">&lt;</div></div>
+                <div id="listState">{this.state.plants[this.state.currentPlant]}</div>
+                <div id="button-next" onClick={() => this.handleNextPlant(this.state.currentPlant++)}><div id="left">&gt;</div></div>
+            </div>
+            <div id="water">
+                <WaterPlants />
             </div>
             <div id="treatment">
                 <TreatmentPlants />

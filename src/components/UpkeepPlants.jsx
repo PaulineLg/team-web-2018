@@ -135,7 +135,7 @@ class UpkeepPlants extends Component{
                     type="mscolumn2d"
                     dataSource={myDataSource}
                     fcLibrary={FusionCharts} // Provide FusionCharts library
-                />,
+                />
             </div>
         );
     }
