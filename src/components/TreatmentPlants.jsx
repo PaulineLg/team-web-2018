@@ -98,7 +98,6 @@ class TreatmentPlants extends Component{
     render(){
         return (
         <div>
-            Treatments
             <ReactFC
             width="400"
             height="190"

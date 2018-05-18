@@ -14,7 +14,7 @@ Charts(FusionCharts);
 
 const myDataSource = {
     "chart": {
-        "caption": "Stock of flowers",
+        "caption": "Stock of seeds",
         "subCaption": "July",
         "showPercentInTooltip": "0",
         "decimals": "1",
@@ -52,7 +52,7 @@ const chartConfigs = {
     dataSource: myDataSource
 }
 
-class StockPlants extends Component{
+class StockSeeds extends Component{
     render(){
         return (
         <div>
@@ -68,4 +68,4 @@ class StockPlants extends Component{
     }
 }
 
-export default StockPlants;
+export default StockSeeds;

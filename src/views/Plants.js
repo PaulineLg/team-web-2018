@@ -54,15 +54,17 @@ handleNextPlant = (newCurrent) => {
     return (
         <div className="Plants">
             <h1>MY PLANTS</h1>
-            Hello {this.props.user.name}, your watering level for this plants
+            <h2> Hello {this.props.user.name}, Does this plant need water ? or treatement</h2>
             <div id="plantsList">
                 <div id="button-prev" onClick={() => this.handlePrevPlant(this.state.currentPlant--)}><div id="right">&lt;</div></div>
                 <div id="listState">{this.state.plants[this.state.currentPlant]}</div>
                 <div id="button-next" onClick={() => this.handleNextPlant(this.state.currentPlant++)}><div id="left">&gt;</div></div>
             </div>
+            <h3> Below you can see your watering level for this plant </h3>
             <div id="water">
                 <WaterPlants />
             </div>
+            <h3> Your treatment level for this plant </h3>
             <div id="treatment">
                 <TreatmentPlants />
             </div>

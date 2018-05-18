@@ -227,11 +227,18 @@ button:hover {
 }
 
 #water{
-  margin-top: 5%;
+  margin-top: 4%;
   margin-left: 2%;
 }
+
+#Stockplants{
+
+  margin-top: 4%;
+  margin-left: 2%;
+}
+
 #treatment{
-  margin-top: 25%;
+  margin-top: 5%;
   margin-left: 2%;
 }
 
@@ -264,7 +271,7 @@ button:hover {
   height: auto;
   display: flex;
   flex-direction: row;
-  margin-top: 10%;
+  margin-top: 4%;
   margin-left: 50%;
 }
 
@@ -287,6 +294,21 @@ h1 {
 	color: #455A64 ;
 }
 
+h2 {
+  top :30px;
+	position: relative;
+	font: 30px Helvetica, Sans-Serif;
+	letter-spacing: 5px;
+	color: #455A64 ;
+}
+
+h3 {
+  top :30px;
+	position: relative;
+	font: 20px Helvetica, Sans-Serif;
+	letter-spacing: 5px;
+	color: #455A64 ;
+}
 
 #button-prev, #button-next{
   background-color: white;
@@ -300,6 +322,8 @@ h1 {
 
 #listState{
   width: 20%;
+  color: #455A64 ;
+
 }
 
 #right, #left{
