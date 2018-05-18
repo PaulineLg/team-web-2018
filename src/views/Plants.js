@@ -17,7 +17,7 @@ class Plants extends Component {
     currentPlant: 'tulip'
   }
 
-  handleNextPlant()
+ // handleNextPlant()
 
   PlantsView() {
     return (
