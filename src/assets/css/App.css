@@ -256,17 +256,15 @@ button:hover {
   color : white;
   font: 20px Helvetica, serif;
   text-align: center;
-  margin-left: 15%;
-  margin-top: 10%;
   line-height: 38px;
-  background-color: black; 
   height: auto;
-  width: 90%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 10%;
+  margin-left: 50%;
 }
 
 #plantsList ul{
-  display: flex;
-  flex-direction: row;
   justify-content: center;
   list-style: none;
   text-align: center;
@@ -283,4 +281,19 @@ h1 {
 	font: 30px Helvetica, Sans-Serif;
 	letter-spacing: 5px;
 	color: white ;
+}
+
+
+#button-prev, #button-next{
+  background-color: white;
+  color: black;
+  width: 5%;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+}
+
+#listState{
+  width: 10%;
 }
