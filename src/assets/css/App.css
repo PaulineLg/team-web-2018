@@ -295,5 +295,9 @@ h1 {
 }
 
 #listState{
-  width: 10%;
+  width: 20%;
+}
+
+#right, #left{
+  margin-left: 35%;
 }
