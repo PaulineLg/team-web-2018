@@ -16,41 +16,56 @@ const myDataSource = {
     "chart": {
       "caption": "Shipping Graph",
       "subcaption": "Average of time delivery",
-      "linethickness": "3",
+      "paletteColors": '#F06292, #9CCC65',
+      "linethickness": "2",
       "numberSuffix": " days",
       "showvalues": "0",
       "formatnumberscale": "0",
+      "bgColor": "#D5F5E3",
       "labeldisplay": "ROTATE",
       "slantlabels": "1",
       "divLineAlpha": "40",
-      "anchoralpha": "0",
       "animation": "1",
-      "legendborderalpha": "20",
       "drawCrossLine": "1",
       "crossLineColor": "#0d0d0d",
       "crossLineAlpha": "100",
-      "tooltipGrayOutColor": "#80cfff",
-      "theme": "zune"
-    },
+      "canvasBgColor": '#D4EFDF',
+      "showCanvasBorder":"0",
+      "showBorder": "0",
+      "showLegend": "1",
+
+      "legendBgAlpha": "0",
+      "legendBorderAlpha": "0",
+      "legendShadow": "0",
+      "legendItemFontSize": "10",
+      "legendItemFontColor": "#666666",
+      "drawCustomLegendIcon": "1",
+      "legendIconAlpha": "50",
+      "legendIconBorderColor": "#123456",
+      "legendIconBorderThickness": "3",
+      "legendIconSides": "7",
+      "legendIconStartAngle": "60",
+               
+     },
     "categories": [{
       "category": [{
-        "label": "Commande 01"
+        "label": "Order 01"
       }, {
-        "label": "Commande 02"
+        "label": "Order 02"
       }, {
-        "label": "Commande 03"
+        "label": "Order 03"
       }, {
-        "label": "Commande 04"
+        "label": "Order 04"
       }, {
-        "label": "Commande 05"
+        "label": "Order 05"
       }, {
-        "label": "Commande 06"
+        "label": "Order 06"
       }, {
-        "label": "Commande 07"
+        "label": "Order 07"
       }, {
-        "label": "Commande 08"
+        "label": "Order 08"
       }, {
-        "label": "Commande 09"
+        "label": "Order 09"
       }]
     }],
     "dataset": [{

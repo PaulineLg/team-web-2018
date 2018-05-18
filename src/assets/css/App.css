@@ -1,6 +1,6 @@
 html {
   height: 100%;
-  background-image: url('../img/bg2.jpg');
+  background-color: #EAFAF1;
   background-repeat: repeat;
 }
 
@@ -28,6 +28,10 @@ body {
   height: 150px;
   padding: 20px;
   color: white;
+}
+
+[class*="creditgroup"]{
+  display: none;
 }
 
 .App-title {
@@ -232,7 +236,7 @@ button:hover {
 }
 
 #orders-list {
-  color : white;
+  color : #455A64;
   font: 20px Helvetica, serif;
   text-align: left;
   margin-left: 55%;
@@ -255,5 +259,5 @@ h1 {
 	position: relative;
 	font: 30px Helvetica, Sans-Serif;
 	letter-spacing: 5px;
-	color: white ;
+	color: #455A64 ;
 }
