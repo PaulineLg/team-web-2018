@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import FontAwesome from 'react-fontawesome';
 
-import logo from '../crepe.png';
-
 class Sidebar extends Component{
   constructor(props) {
     super(props)
