@@ -282,7 +282,7 @@ button:hover {
 }
 
 #plantsList ul li{
-  border-right: 10px solid transparent; 
+  border-right: 10px solid transparent;
 }
 
 h1 {
@@ -328,4 +328,25 @@ h3 {
 
 #right, #left{
   margin-left: 35%;
+}
+
+/* ORDER TABLE */
+
+.OrderTable {
+  width: 100%;
+  margin-top: 100px;
+}
+
+.table {
+  margin: auto;
+  background-color: #edf9d9;
+}
+
+.table th {
+  background-color: #dfefc2;
+}
+
+.table th, .table td {
+  width: 150px;
+  padding: 10px 0;
 }

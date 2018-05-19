@@ -12,14 +12,25 @@ class Order extends Component {
     super(props)
     this.state = {
       user: this.props.user,
-      orders: []
+      currentOrders: [],
+      oldOrders: []
     }
     this.currentOrders()
+    this.oldOrders()
   }
   currentOrders() {
-    axios.get('https://fierce-river-71227.herokuapp.com/u/99998/orders/current/1')
+    axios.get('https://fierce-river-71227.herokuapp.com/u/' + this.state.user.userId + '/orders/current/1')
     .then(response => this.setState({
-      orders: response.data
+      currentOrders: response.data
+    }))
+    .catch(function(error) {
+      console.log(error)
+    })
+  }
+  oldOrders() {
+    axios.get('https://fierce-river-71227.herokuapp.com/u/' + this.state.user.userId + '/orders/old/1')
+    .then(response => this.setState({
+      oldOrders: response.data
     }))
     .catch(function(error) {
       console.log(error)
@@ -31,7 +42,8 @@ class Order extends Component {
     return (
       <div className="User">
         <h1>ORDERS</h1>
-        <OrderTable orders={this.state.orders}/>
+        <OrderTable orders={this.state.currentOrders} title="Current orders"/>
+        <OrderTable orders={this.state.oldOrders} title="History of orders"/>
       </div>
     )
   }
