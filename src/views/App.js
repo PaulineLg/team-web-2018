@@ -8,6 +8,7 @@ import logo from '../assets/img/logo-flower.png';
 import axios from 'axios'
 import UpkeepPlants from '../components/UpkeepPlants.jsx';
 import User from '../views/User.js'
+import Order from '../views/Order.js'
 
 class App extends Component {
   constructor() {
@@ -15,20 +16,22 @@ class App extends Component {
    this.state = {
      menu : 'user',
      user: {
-       name: '',
-       userId: 'fe',
-       sessionId: 'gg',
+       name: 'Bret',
+       userId: '99998',
+       sessionId: 'bret1dFq64dqz4dQZcf46',
        img: 'http://i.stack.imgur.com/mGmfu.png'
      }
    }
    this.login()
  }
  login() {
+    /*
+     * On aurait mis ici notre requête pour le login si on avait implémenté cette fonctionnalité
     axios.get('https://jsonplaceholder.typicode.com/users/1')
-   .then(response => this.setState({user: {name: response.data.username, userId: response.data.id, sessionId: response.data.username + response.data.address.zipcode}}))
+   .then(response => this.setState({user: {name: response.data.username, sessionId: response.data.username + response.data.address.zipcode}}))
+   */
   }
   userConnected() {
-    //this.login()
     if (this.state.user.userId && this.state.user.sessionId)
       return true
     else
@@ -81,7 +84,7 @@ class App extends Component {
         return;
         break;
       case 'orders':
-        return;
+        return (<Order user={this.state.user} />)
         break;
       default:
 

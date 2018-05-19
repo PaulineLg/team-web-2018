@@ -3,7 +3,6 @@ import '../assets/css/App.css';
 import Card from '../components/Card.jsx';
 import Sidebar from '../components/Sidebar.jsx';
 import ShippingGraph from '../components/ShippingGraph.jsx';
-import WelcomePage from '../components/WelcomePage.jsx';
 import logo from '../assets/img/logo-flower.png';
 import axios from 'axios'
 import UpkeepPlants from '../components/UpkeepPlants.jsx';
@@ -15,9 +14,9 @@ class User extends Component {
     return (
       <div className="User">
         <h1>USER STATISTICS</h1>
-        
+
         <div id="OrdersMap">
-            <MapContainer google={this.props.google} />
+            <MapContainer google={this.props.google} user={this.props.user} />
             <div id="orders-list">Hello {this.props.user.name}, <br/>
             The adresses of the next 3 deliveries to make : <br/>
             New York County Supreme Court <br/>
