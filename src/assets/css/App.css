@@ -75,6 +75,10 @@ body {
 
 * {box-sizing: border-box}
 
+.User, .Order {
+  margin-left: 15%;
+}
+
 .form-container {
   background-color: white;
   border: solid 10px #fecace;
@@ -155,9 +159,10 @@ button:hover {
 /* SIDEBAR */
 
 .sidebar {
+  position: fixed;
   float: left;
   background-color: #3b373d;
-  height: 120%;
+  height: 100%;
   color: grey;
   font-weight: bold;
   min-width: 100px;
@@ -204,26 +209,6 @@ button:hover {
 .selected {
   color: white;
   transition: 0.5s color ease;
-}
-
-#ShippingGraph{
-  position: absolute;
-  margin-top: 18%;
-  margin-left: 22%;
-  margin-bottom: 40px;
-
-}
-
-#UpkeepPlants{
-  position: absolute;
-  margin-top: 18%;
-  margin-left: 60%;
-  margin-bottom: 40px;
-}
-
-#OrdersMap{
-  margin-top: 5%;
-  margin-left: 22%;
 }
 
 #water{
@@ -349,4 +334,20 @@ h3 {
 .table th, .table td {
   width: 150px;
   padding: 10px 0;
+}
+
+/* CHARTS */
+
+.OrdersMap{
+  margin-top: 5%;
+  margin-left: 5%;
+  height: 500px;
+}
+
+.chart {
+  display: inline-block;
+}
+
+.chart-container {
+  display: block;
 }
