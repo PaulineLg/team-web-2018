@@ -14,15 +14,17 @@ Charts(FusionCharts);
 
 const myDataSource = {
     "chart": {
-        "theme": "fint",
         "caption": "Health of your plant",
         "subcaption": "The degree of good health of your plants",
+        "paletteColors": '#F06292, #9CCC65',
+
+        "bgColor": "#D5F5E3",
+        "showBorder": "0",
         "lowerLimit": "0",
         "upperLimit": "100",
         "numberSuffix": "%",
-        "chartBottomMargin": "40",
-        "valueFontSize": "11",
-        "valueFontBold": "0"
+        "chartBottomMargin": "40",  
+        "valueFontBold": "0" 
     },
     "colorRange": {
         "color": [{
@@ -74,21 +76,9 @@ const myDataSource = {
         "groups": [{
             "id": "range",
             "items": [{
-                "id": "rangeBg",
-                "type": "rectangle",
-                "x": "$chartCenterX-115",
-                "y": "$chartEndY-35",
-                "tox": "$chartCenterX +115",
-                "toy": "$chartEndY-15",
-                "fillcolor": "#0075c2"
+          
             }, {
-                "id": "rangeText",
-                "type": "Text",
-                "fontSize": "11",
-                "fillcolor": "#ffffff",
-                "text": "Recommended Utilization Range : 70% - 85%",
-                "x": "$chartCenterX",
-                "y": "$chartEndY-25"
+               
             }]
         }]
     }
@@ -108,7 +98,6 @@ class TreatmentPlants extends Component{
     render(){
         return (
         <div>
-            Treatments
             <ReactFC
             width="400"
             height="190"

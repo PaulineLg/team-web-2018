@@ -15,8 +15,8 @@ Charts(FusionCharts);
 const myDataSource = {
         "chart": {
             "manageresize": "1",
-            "bgcolor": "666666",
-            "bgalpha": "0",
+            "bgColor": "#EAFAF1",
+            "bgalpha": "100",
             "showborder": "0",
             "lowerlimit": "0",
             "upperlimit": "100",
@@ -25,11 +25,11 @@ const myDataSource = {
             "showlimits": "0",
             "numbersuffix": "%",
             "decmials": "0",
-            "cylfillcolor": "3333ff",
-            "basefontcolor": "CC0000",
+            "cylfillcolor": "#5DADE2",
             "chartleftmargin": "15",
             "chartrightmargin": "15",
-            "charttopmargin": "15"
+            "charttopmargin": "15",
+          
         },
         "value": "44",
         "annotations": {

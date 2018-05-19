@@ -1,6 +1,6 @@
 html {
   height: 100%;
-  background-image: url('../img/bg2.jpg');
+  background-color: #EAFAF1;
   background-repeat: repeat;
 }
 
@@ -28,6 +28,10 @@ body {
   height: 150px;
   padding: 20px;
   color: white;
+}
+
+[class*="creditgroup"]{
+  display: none;
 }
 
 .App-title {
@@ -223,16 +227,23 @@ button:hover {
 }
 
 #water{
-  margin-top: 5%;
+  margin-top: 4%;
   margin-left: 2%;
 }
+
+#Stockplants{
+
+  margin-top: 4%;
+  margin-left: 2%;
+}
+
 #treatment{
-  margin-top: 25%;
+  margin-top: 5%;
   margin-left: 2%;
 }
 
 #orders-list {
-  color : white;
+  color : #455A64;
   font: 20px Helvetica, serif;
   text-align: left;
   margin-left: 55%;
@@ -260,7 +271,7 @@ button:hover {
   height: auto;
   display: flex;
   flex-direction: row;
-  margin-top: 10%;
+  margin-top: 4%;
   margin-left: 50%;
 }
 
@@ -280,9 +291,24 @@ h1 {
 	position: relative;
 	font: 30px Helvetica, Sans-Serif;
 	letter-spacing: 5px;
-	color: white ;
+	color: #455A64 ;
 }
 
+h2 {
+  top :30px;
+	position: relative;
+	font: 30px Helvetica, Sans-Serif;
+	letter-spacing: 5px;
+	color: #455A64 ;
+}
+
+h3 {
+  top :30px;
+	position: relative;
+	font: 20px Helvetica, Sans-Serif;
+	letter-spacing: 5px;
+	color: #455A64 ;
+}
 
 #button-prev, #button-next{
   background-color: white;
@@ -296,6 +322,8 @@ h1 {
 
 #listState{
   width: 20%;
+  color: #455A64 ;
+
 }
 
 #right, #left{
