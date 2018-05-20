@@ -29,7 +29,7 @@ const myDataSource = {
             "value": "50"
         },
         {
-            "label": "Tulipes",
+            "label": "Tulips",
             "value": "10"
         },
         {
@@ -37,7 +37,7 @@ const myDataSource = {
             "value": "60"
         },
         {
-            "label": "Orchidées",
+            "label": "Orchid",
             "value": "90"
         }
     ]

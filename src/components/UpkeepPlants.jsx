@@ -47,7 +47,7 @@ const myDataSource =
             {
                 "category": [
                     {
-                        "label": "Tulipes"
+                        "label": "Tulip"
                     },
                     {
                         "label": "Rose"
@@ -56,10 +56,7 @@ const myDataSource =
                         "label": "Muguet"
                     },
                     {
-                        "label": "Orchidées"
-                    },
-                    {
-                        "label": "Pissenli"
+                        "label": "Orchid"
                     }
                 ]
             }
@@ -80,9 +77,6 @@ const myDataSource =
                     },
                     {
                         "value": "40"
-                    },
-                    {
-                        "value": "20"
                     }
                 ]
             },
@@ -101,9 +95,6 @@ const myDataSource =
                     },
                     {
                         "value": "32"
-                    },
-                    {
-                        "value": "10"
                     }
                 ]
             }

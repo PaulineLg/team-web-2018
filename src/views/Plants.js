@@ -17,7 +17,7 @@ class Plants extends Component {
         this.handleNextPlant = this.handleNextPlant.bind(this);
         this.handlePrevPlant = this.handlePrevPlant.bind(this);
         this.state = {
-            plants: ['Tulip', 'Rose', 'Muguet', 'Orchidées'],
+            plants: ['Tulip', 'Rose', 'Muguet', 'Orchid'],
             currentPlant: 0
         }
       }
