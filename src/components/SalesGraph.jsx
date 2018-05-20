@@ -1,11 +1,10 @@
 import React, {Component} from 'react';
 
-import logo from '../crepe.png';
-
 import ReactDOM from 'react-dom';
 import FusionCharts from 'fusioncharts';
 import Charts from 'fusioncharts/fusioncharts.charts';
 import ReactFC from 'react-fusioncharts';
+import axios from 'axios'
 
 // Provide FusionCharts core and other modules to resolve
 ReactFC.fcRoot(FusionCharts, Charts)
@@ -14,11 +13,11 @@ Charts(FusionCharts);
 
 const myDataSource = {
     "chart": {
-      "caption": "Shipping Graph",
-      "subcaption": "Average of time delivery",
+      "caption": "Sales Graph",
+      "subcaption": "ordered by flower",
       "paletteColors": '#F06292, #9CCC65',
       "linethickness": "2",
-      "numberSuffix": " days",
+      "numberSuffix": "",
       "showvalues": "0",
       "formatnumberscale": "0",
       "bgColor": "#D5F5E3",
@@ -49,72 +48,26 @@ const myDataSource = {
      },
     "categories": [{
       "category": [{
-        "label": "Order 01"
+        "label": "Roses"
       }, {
-        "label": "Order 02"
+        "label": "Tulips"
       }, {
-        "label": "Order 03"
+        "label": "Orchid"
       }, {
-        "label": "Order 04"
-      }, {
-        "label": "Order 05"
-      }, {
-        "label": "Order 06"
-      }, {
-        "label": "Order 07"
-      }, {
-        "label": "Order 08"
-      }, {
-        "label": "Order 09"
-      }]
+        "label": "Muguet"
+      }],
+
     }],
     "dataset": [{
-      "seriesname": "Expected time",
+      "seriesname": "By flower",
       "data": [{
-        "value": "3"
+        "value": "10"
       }, {
-        "value": "5"
-      }, {
-        "value": "7"
+        "value": "8"
       }, {
         "value": "2"
       }, {
-        "value": "9"
-      }, {
-        "value": "3"
-      }, {
-        "value": "8"
-      }, {
-        "value": "4"
-      }, {
-        "value": "8"
-      }, {
-        "value": "5"
-      }]
-    }, {
-      "seriesname": "Effective time",
-      "data": [{
-        "value": "4"
-      }, {
-        "value": "2"
-      }, {
-        "value": "9"
-      }, {
-        "value": "6"
-      }, {
-        "value": "5"
-      }, {
-        "value": "6"
-      }, {
-        "value": "7"
-      }, {
-        "value": "8"
-      }, {
-        "value": "9"
-      }, {
-        "value": "1"
-      }, {
-        "value": "632200"
+        "value": "26"
       }]
     }]
   }
@@ -124,10 +77,22 @@ const myDataSource = {
     width: 600,
     height: 400,
     dataFormat: 'json',
-    dataSource: myDataSource,
+    dataSource: myDataSource
   };
 
-class ShippingGraph extends Component{
+class SalesGraph extends Component{
+    constructor(props) {
+      super(props)
+    }
+    loadSalesMonth() {
+        axios.get('https://fierce-river-71227.herokuapp.com/u/' + this.props.user.userId + '/sales/month/commandes')
+        .then(response => this.setState({
+          sales: response.data
+        }))
+        .catch(function(error) {
+          console.log(error)
+        })
+    }
     render(){
         const sidebarBackground = {
             backgroundColor: 'blue'
@@ -146,4 +111,4 @@ class ShippingGraph extends Component{
     }
 }
 
-export default ShippingGraph;
+export default SalesGraph;

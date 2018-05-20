@@ -1,14 +1,21 @@
+html {
+  height: 100%;
+  background-color: #EAFAF1;
+  background-repeat: repeat;
+}
+
 body {
-  background-image: url('../img/flower_bg.jpg');
+    height: 100%;
+}
+
+#root {
+  height: 100%;
 }
 
 .App {
   text-align: center;
-  background-color: lightblue;
-  height: 400px;
-  width: 95%;
-  margin: auto;
-  margin-top: 2%;
+  height: 100%;
+  width: 100%;
 }
 
 .App-logo {
@@ -21,6 +28,10 @@ body {
   height: 150px;
   padding: 20px;
   color: white;
+}
+
+[class*="creditgroup"]{
+  display: none;
 }
 
 .App-title {
@@ -63,6 +74,10 @@ body {
 }
 
 * {box-sizing: border-box}
+
+.User, .Order {
+  margin-left: 15%;
+}
 
 .form-container {
   background-color: white;
@@ -144,18 +159,14 @@ button:hover {
 /* SIDEBAR */
 
 .sidebar {
+  position: fixed;
   float: left;
-  background-color: #333;
+  background-color: #3b373d;
   height: 100%;
-  color: white;
+  color: grey;
   font-weight: bold;
-  text-align: center;
-}
-
-.sidebar a {
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
+  min-width: 100px;
+  width: 15%;
 }
 
 .logo-sidebar {
@@ -164,17 +175,179 @@ button:hover {
 
 .nav {
   list-style: none;
-  margin: 10px 0;
+  margin: 0;
+  font-size: 1.2rem;
   padding: 0;
 }
 
 .nav li {
-  padding-top: 10px;
-  font-size: 1.2rem;
+  padding: 30px 0;
   cursor: pointer;
 }
 
+#user-profile {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #62c1b6;
+  height: 125px;
+  color: white;
+}
+
+#user-profile img {
+  width: 100px;
+  height: 100px;
+}
+
+.user-name {
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding-left: 10px;
+}
+
 .selected {
-  text-decoration: underline;
-  font-size: 1.4em;
+  color: white;
+  transition: 0.5s color ease;
+}
+
+#water{
+  margin-top: 4%;
+  margin-left: 2%;
+}
+
+#Stockplants{
+
+  margin-top: 4%;
+  margin-left: 2%;
+}
+
+#treatment{
+  margin-top: 5%;
+  margin-left: 2%;
+}
+
+#orders-list {
+  color : #455A64;
+  font: 20px Helvetica, serif;
+  text-align: left;
+  margin-left: 55%;
+  margin-top: -28%;
+  line-height: 38px;
+}
+
+#orders-list ul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
+
+#orders-list ul li{
+  float: left;
+  border-right: 1px solid transparent;
+}
+
+#plantsList{
+  color : white;
+  font: 20px Helvetica, serif;
+  text-align: center;
+  line-height: 38px;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  margin-top: 4%;
+  margin-left: 50%;
+}
+
+#plantsList ul{
+  justify-content: center;
+  list-style: none;
+  text-align: center;
+}
+
+#plantsList ul li{
+  border-right: 10px solid transparent;
+}
+
+h1 {
+  top :40px;
+  display: inline;
+	position: relative;
+	font: 30px Helvetica, Sans-Serif;
+	letter-spacing: 5px;
+	color: #455A64 ;
+}
+
+h2 {
+  top :30px;
+	position: relative;
+	font: 30px Helvetica, Sans-Serif;
+	letter-spacing: 5px;
+	color: #455A64 ;
+}
+
+h3 {
+  top :30px;
+	position: relative;
+	font: 20px Helvetica, Sans-Serif;
+	letter-spacing: 5px;
+	color: #455A64 ;
+}
+
+#button-prev, #button-next{
+  background-color: white;
+  color: black;
+  width: 5%;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+}
+
+#listState{
+  width: 20%;
+  color: #455A64 ;
+
+}
+
+#right, #left{
+  margin-left: 35%;
+}
+
+/* ORDER TABLE */
+
+.OrderTable {
+  width: 100%;
+  margin-top: 100px;
+}
+
+.table {
+  margin: auto;
+  background-color: #edf9d9;
+}
+
+.table th {
+  background-color: #dfefc2;
+}
+
+.table th, .table td {
+  width: 150px;
+  padding: 10px 0;
+}
+
+/* CHARTS */
+
+.OrdersMap{
+  margin-top: 5%;
+  margin-left: 5%;
+  height: 500px;
+}
+
+.chart {
+  display: inline-block;
+}
+
+.chart-container {
+  display: block;
 }

@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-
-import logo from '../crepe.png';
+import FontAwesome from 'react-fontawesome';
 
 class Sidebar extends Component{
   constructor(props) {
@@ -13,44 +12,47 @@ class Sidebar extends Component{
         orders: ''
       }
     }
-    switch (this.props.menu) {
-      case 'user':
-        this.state.menuClasses.user = 'selected'
-        break
-      case 'plants':
-        this.state.menuClasses.plants = 'selected'
-        break
-      case 'stock':
-        this.state.menuClasses.stock = 'selected'
-        break
-      case 'orders':
-        this.state.menuClasses.orders = 'selected'
-        break
-      default:
-        break
-    }
-    console.log(this.state)
+    this.switchMenu()
   }
+  switchMenu = () => {
+      this.state = {
+        menuClasses : {
+          user: '',
+          plants: '',
+          stock: '',
+          orders: ''
+        }
+      }
+      switch (this.props.menu) {
+        case 'user':
+          this.state.menuClasses.user = 'selected'
+          break
+        case 'plants':
+          this.state.menuClasses.plants = 'selected'
+          break
+        case 'stock':
+          this.state.menuClasses.stock = 'selected'
+          break
+        case 'orders':
+          this.state.menuClasses.orders = 'selected'
+          break
+        default:
+          break
+      }
+    }
     render(){
+        this.switchMenu()
+        let changeMenu = this.props.changeMenu
+        const profilePic = this.props.user.img
         return (
             <div id="sidebar" className="sidebar" data-color="black">
-                    <div className="logo-sidebar">
-                        <a href="#" className="simple-text logo-mini">
-                            <div className="logo-img">
-                                <img src={logo} alt="logo_image"/>
-                            </div>
-
-                        </a>
-                        <a href="#" className="simple-text logo-normal">
-                            My Flowers Manager
-                        </a>
-                    </div>
                 <div className="sidebar-wrapper">
                     <ul className="nav">
-                        <li id="user" class={this.state.menuClasses.user}> USER </li>
-                        <li id="plants" class={this.state.menuClasses.plants}> Plants </li>
-                        <li id="stock" class={this.state.menuClasses.stock}> Stock </li>
-                        <li id="orders" class={this.state.menuClasses.orders}> Orders </li>
+                    <li id="user-profile"> <img src='http://i.stack.imgur.com/mGmfu.png' /> <span className="user-name"> {this.props.user.name} </span> </li>
+                    <li id="user" className="menu-item" onClick={() => changeMenu("user")} className={this.state.menuClasses.user}> <FontAwesome name='tachometer' size='2x' /> Profile </li>
+                    <li id="plants" className="menu-item" onClick={() => changeMenu("plants")} className={this.state.menuClasses.plants}> <FontAwesome name='leaf' size='2x' /> Plants </li>
+                    <li id="stock" className="menu-item" onClick={() => changeMenu("stock")} className={this.state.menuClasses.stock}> <FontAwesome name='leaf' weight='solid' size='2x' /> Stock </li>
+                    <li id="orders" className="menu-item" onClick={() => changeMenu("orders")} className={this.state.menuClasses.orders}> <FontAwesome name='leaf' weight='solid' size='2x' /> Orders </li>
                     </ul>
                 </div>
             </div>
