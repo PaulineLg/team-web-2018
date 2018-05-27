@@ -48,7 +48,7 @@ class Sidebar extends Component{
             <div id="sidebar" className="sidebar" data-color="black">
                 <div className="sidebar-wrapper">
                     <ul className="nav">
-                    <li id="user-profile"> <img src='http://i.stack.imgur.com/mGmfu.png' /> <span className="user-name"> {this.props.user.name} </span> </li>
+                    <li id="user-profile"> <img src='https://image.ibb.co/fAKidJ/imageedit_2_9600128013.gif' /> <span className="user-name"> {this.props.user.name} </span> </li>
                     <li id="user" className="menu-item" onClick={() => changeMenu("user")} className={this.state.menuClasses.user}> <FontAwesome name='tachometer' size='2x' /> Profile </li>
                     <li id="plants" className="menu-item" onClick={() => changeMenu("plants")} className={this.state.menuClasses.plants}> <FontAwesome name='leaf' size='2x' /> Plants </li>
                     <li id="stock" className="menu-item" onClick={() => changeMenu("stock")} className={this.state.menuClasses.stock}> <FontAwesome name='leaf' weight='solid' size='2x' /> Stock </li>

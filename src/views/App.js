@@ -17,10 +17,10 @@ class App extends Component {
    this.state = {
      menu : 'user',
      user: {
-       name: 'Bret',
+       name: 'Hedi',
        userId: '99998',
        sessionId: 'bret1dFq64dqz4dQZcf46',
-       img: 'http://i.stack.imgur.com/mGmfu.png'
+       img: 'https://ibb.co/icv0Qy'
      }
    }
    this.login()
